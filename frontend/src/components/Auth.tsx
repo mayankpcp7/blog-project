@@ -44,9 +44,9 @@ const Auth: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-4 ">
-      <div className="w-full max-w-md bg-print text-white p-8  drop-shadow-[0_0_10px_#ffff] rounded-2xl shadow-2xl border border-[#39FF14]">
-        <h2 className="text-3xl font-bold text-center mb-6 drop-shadow-[0_0_10px_#ffff]">
+    <div className="flex items-center p-5 justify-center">
+      <div className="w-full max-w-md p-8 rounded-2xl bg-white text-[#2c003e]">
+        <h2 className="text-3xl font-bold text-center mb-6">
           {isSignUp ? "Create Account" : "Sign In"}
         </h2>
 
@@ -58,7 +58,7 @@ const Auth: React.FC = () => {
               placeholder="Full Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 rounded bg-zinc-900 text-white placeholder-[#39FF14] border border-white focus:outline-none focus:ring-2 focus:ring-[#39FF14] shadow-[0_0_10px_#ffff]"
+              className="w-full p-3 rounded bg-white text-[#2c003e] placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2c003e] shadow-sm"
               required
             />
           )}
@@ -69,7 +69,7 @@ const Auth: React.FC = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 rounded bg-zinc-900 text-white placeholder-[#39FF14] border border-[#39FF14] focus:outline-none focus:ring-2 focus:ring-[#39FF14] shadow-[0_0_10px_#ffff]"
+            className="w-full p-3 rounded bg-white text-[#2c003e] placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2c003e] shadow-sm"
             required
           />
 
@@ -79,23 +79,23 @@ const Auth: React.FC = () => {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            className="w-full p-3 rounded bg-zinc-900 text-white placeholder-[#39FF14] border border-[#39FF14] focus:outline-none focus:ring-2 focus:ring-[#39FF14] shadow-[0_0_10px_#ffff]"
+            className="w-full p-3 rounded bg-white text-[#2c003e] placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2c003e] shadow-sm"
             required
           />
 
           <button
             type="submit"
-            className="w-full bg-[#39FF14] hover:bg-[#2aff10] text-black py-3 rounded font-semibold transition duration-300 shadow-[0_0_20px_#39FF14]"
+            className="w-full bg-[#2c003e] text-white font-semibold py-3 rounded hover:bg-[#39FF14] hover:text-black transition duration-300 shadow-lg"
           >
             {isSignUp ? "Create Account" : "Sign In"}
           </button>
         </form>
 
-        <p className="text-center text-sm text-white mt-6">
+        <p className="text-center text-sm text-[#2c003e] mt-6">
           {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
           <button
             onClick={toggleForm}
-            className="text-white hover:underline ml-1"
+            className="text-[#2c003e] font-semibold underline ml-1"
           >
             {isSignUp ? "Sign In" : "Create Account"}
           </button>
